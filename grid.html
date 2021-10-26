@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid container</title>
+    <style>
+    .container{
+        display: grid;
+       grid-template-columns: repeat(auto-fill , minmax(200px,1fr));
+        grid-gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+        grid-auto-columns: minmax(50px,auto);
+        column-gap: 20px;
+    }
+    .items{
+        background-color: blue;
+        border:6px solid chartreuse;
+        border-radius: 6px;
+        padding: 5px;
+    }
+    #deep{
+        text-size-adjust: 10px;
+    }
+    #item1{
+        grid-row-start: 1;
+        grid-row-end: 3;
+        background-color: aqua;
+        border: 6px solid blue;
+    }
+    .item-1-container{
+        display: grid;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+      <div class="items-1-container"id="item1">
+          <div class="nested-item">dabbe me dabba </div>
+          <div class="nested-item">dabbe me dabba </div>
+          <div class="nested-item">dabbe me dabba </div> </div>
+
+      <div class="items">dabba2</div>
+      <div class="items">dabba3</div>
+      <div class="items">dabba4</div>
+      <div class="items">dabba5</div>
+    </div>
+</body>
+</html>
